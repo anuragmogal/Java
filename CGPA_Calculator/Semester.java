@@ -1,12 +1,23 @@
-package CGPA_Calculator;
-
-import java.util.ArrayList;
-import java.util.Vector;
+import java.util.List;
 
 public class Semester {
-    int year;
-    String branch;
-    Vector<Integer> credits = new Vector<Integer>();
-    Vector<Integer> gpas = new Vector<Integer>();
-    ArrayList subjects = new ArrayList<Subject>();
+    private int semesterNumber;
+    private List<Subject> subjects;
+
+    public Semester(int semesterNumber, List<Subject> subjects) {
+        this.semesterNumber = semesterNumber;
+        this.subjects = subjects;
+    }
+
+    public int getSemesterNumber() {
+        return semesterNumber;
+    }
+
+    public List<Subject> getSubjects() {
+        return subjects;
+    }
+
+    public void setSubjects(List<Subject> subjects) {
+        this.subjects = subjects;
+    }
 }
